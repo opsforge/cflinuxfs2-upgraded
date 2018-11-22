@@ -11,17 +11,17 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty universe \n\
 deb-src http://archive.ubuntu.com/ubuntu/ trusty universe \n\
 deb http://archive.ubuntu.com/ubuntu/ trusty-updates universe \n\
 deb-src http://archive.ubuntu.com/ubuntu/ trusty-updates universe \n\
-
+\n\
 deb http://archive.ubuntu.com/ubuntu/ trusty main \n\
 deb-src http://archive.ubuntu.com/ubuntu/ trusty main \n\
 deb http://archive.ubuntu.com/ubuntu/ trusty-updates main \n\
 deb-src http://archive.ubuntu.com/ubuntu/ trusty-updates main \n\
-
+\n\
 deb http://archive.ubuntu.com/ubuntu/ trusty restricted \n\
 deb-src http://archive.ubuntu.com/ubuntu/ trusty restricted \n\
 deb http://archive.ubuntu.com/ubuntu/ trusty-updates restricted \n\
 deb-src http://archive.ubuntu.com/ubuntu/ trusty-updates restricted \n\
-
+\n\
 deb http://archive.ubuntu.com/ubuntu/ trusty multiverse \n\
 deb-src http://archive.ubuntu.com/ubuntu/ trusty multiverse \n\
 deb http://archive.ubuntu.com/ubuntu/ trusty-updates multiverse \n\
