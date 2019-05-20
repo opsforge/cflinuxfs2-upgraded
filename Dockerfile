@@ -33,6 +33,5 @@ RUN apt-get update && apt-get install --force-yes -y jq sshpass ldap-utils pytho
     
 RUN pip install xlsxwriter requests
 
-RUN export DEBIAN_FRONTEND=noninteractive && \
-    apt-get update && apt-get upgrade --force-yes -y && \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get upgrade --force-yes -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" && \
     apt-get clean
