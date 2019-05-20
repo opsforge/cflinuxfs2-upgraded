@@ -2,7 +2,7 @@ FROM pcfnorm/rootfs:1.0.28
 
 MAINTAINER opsforge.io
 LABEL name="cflinuxfs2-upgraded"
-LABEL version="0.1.0"
+LABEL version="0.2.0"
 LABEL type="weird"
 
 # UNDO THE UNSPEAKABLE THINGS THAT HAVE BEEN DONE TO THIS TRUSTY
@@ -28,6 +28,7 @@ deb http://archive.ubuntu.com/ubuntu/ trusty-updates multiverse \n\
 deb-src http://archive.ubuntu.com/ubuntu/ trusty-updates multiverse" > /etc/apt/sources.list
 
 RUN apt-get update && apt-get install --force-yes -y jq sshpass ldap-utils python-pip && \
+    cp $(which jq) /usr/bin/jq-15 && \
     apt-get clean
     
 RUN pip install xlsxwriter requests
