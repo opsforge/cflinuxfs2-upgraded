@@ -35,3 +35,8 @@ RUN pip install xlsxwriter requests
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get upgrade --force-yes -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" && \
     apt-get clean
+
+RUN cd /tmp && \
+    curl -L -o cf.deb "https://cli.run.pivotal.io/stable?release=debian64&source=github" && \
+    dpkg -i cf.deb && \
+    rm -rf /tmp/*
